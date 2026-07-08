@@ -20,6 +20,10 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ stdlib('c') }}
+    # cross-compilation helpers (needed to build osx-arm64 from osx-64)
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - numpy                                  # [build_platform != target_platform]
   host:
     - python
     - setuptools >=61.0
