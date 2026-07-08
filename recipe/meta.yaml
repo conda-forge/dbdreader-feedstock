@@ -1,4 +1,4 @@
-{% set version = "0.6.1" %}
+{% set version = "0.6.2" %}
 
 package:
   name: dbdreader
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/d/dbdreader/dbdreader-{{ version }}.tar.gz
-  sha256: bd603a92d234cc71a0ed01ed5fefef96b705b1bf7834835570c6c9d89c4f59fd
+  sha256: 8688ca85b2d58abcf4f0a7651ff83b6595d47b1f8fe63bb0a2bf52d8825ad3f8
 
 build:
   skip: true  # [py<310]
@@ -14,7 +14,7 @@ build:
     - dbdrename = dbdreader.scripts:dbdrename
     - cac_gen = dbdreader.scripts:cac_gen
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   build:
