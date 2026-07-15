@@ -1,4 +1,4 @@
-{% set version = "0.6.2" %}
+{% set version = "0.6.3" %}
 
 package:
   name: dbdreader
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/d/dbdreader/dbdreader-{{ version }}.tar.gz
-  sha256: 8688ca85b2d58abcf4f0a7651ff83b6595d47b1f8fe63bb0a2bf52d8825ad3f8
+  sha256: 3b5a42601d8ce78f60f8a1497e4ffeef41f1d1b9260998b2f3c6df577b9ab3d5
 
 build:
   skip: true  # [py<310]
